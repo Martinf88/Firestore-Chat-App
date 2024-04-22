@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+button {
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.chat-app {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 300px; /* Adjust height as needed */
+  border-top: 1px solid #ccc;
+  overflow: hidden; /* Hide overflow if message list exceeds container height */
+}
+
+.message-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.message {
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  font-size: 14px; /* Decreased font size */
+}
+
+.sender {
+  font-weight: bold;
+  color: #555;
+}
+
+.text {
+  margin-top: 5px;
+  padding: 8px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message:nth-child(even) {
+  background-color: #f0f0f0; /* Alternate color for even messages */
+  align-self: flex-end; /* Position even messages to the right */
+}
+
+.message:nth-child(odd) {
+  background-color: #e0e0e0; /* Alternate color for odd messages */
+  align-self: flex-start; /* Position odd messages to the left */
+}
+
+.input-container {
+  display: flex;
+  padding: 10px;
+}
+
+.input-field {
+  flex-grow: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.send-button {
+  padding: 8px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
+
+.clear-button {
+  padding: 8px 20px;
+  font-size: 16px;
+  background-color: #ff1500;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.clear-button:hover {
+  background-color: #b30000;
+}
